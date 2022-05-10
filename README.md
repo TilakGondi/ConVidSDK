@@ -38,7 +38,7 @@ terms of definition, i.e. for compressing the video to quality of High Definitio
 This will accept the Enum values defined in the SDK, enum COMPRESSION_MODE.
 **Allowed Values : NO_COMPRESSION, VHD ,HD ,SD ,LD ,VLD**
 
-##Steps for Integration of ConVidSDK:##
+## Steps for Integration of ConVidSDK: 
 - Copy the ConVidSDK.framework to the project folder
 - In Xcode project settings General>Frameworks & Libraries Add the SDK as framework with
 “Embed & Sign” option
@@ -62,12 +62,12 @@ This will accept the Enum values defined in the SDK, enum COMPRESSION_MODE.
         sdk_conVid = ConVidSDK()
         sdk_conVid.initSDK(with: sdk_config)
     ```
-##Getting the video compressed and converted by ConVidSDK in to required format##
+## Getting the video compressed and converted by ConVidSDK in to required format 
 - Input Parameters:
     - localURL -> This must be the url to the video file that must be converted and compressed by the SDK.
 - Output Parameters:
     - SDK will return the output in the closure block with two parameters **convertedUrl** and **outFileSize**
-- The SDK will return **convertedUrl** which is the URL of the converted file placed in the tmp folder by the SDK and **outFileSize** will be the size of the converted file in MB.
+    - The SDK will return **convertedUrl** which is the URL of the converted file placed in the tmp folder by the SDK and **outFileSize** will be the size of the converted file in MB.
 
 ```Swift
     self?.sdk_conVid!.processFile(atURL: localURL, completion: { convertedUrl,outFileSize in
@@ -78,4 +78,4 @@ This will accept the Enum values defined in the SDK, enum COMPRESSION_MODE.
     })
 ```
 
-######*For improvements and suggestions reach out to me at: tilak.gondi@gmil.com*######
+###### *For improvements and suggestions reach out to me at: tilak.gondi@gmil.com*
