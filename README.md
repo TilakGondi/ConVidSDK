@@ -1,11 +1,12 @@
 # ConVidSDK
 **About:**
+
 This SDK will convert the video at given URL into .mp4/.mov/.m4v format and compress it with
 predefined compression bit rate of VLD/LD/SD/HD/VHD/nill.
 
 **SDK Configuration:**
 
-Declare the sdk_config var of type ConVidConfiguration to pass the required Configuration values
+Declare the sdk_config var of type **ConVidConfiguration** to pass the required Configuration values
 to SDK
 ```Swift 
 var sdk_config:ConVidConfiguration = ConVidConfiguration()
@@ -15,34 +16,35 @@ var sdk_config:ConVidConfiguration = ConVidConfiguration()
 ```Swift 
 sdk_config.FILE_SIZE_LIMIT = .MAX_30MB 
 ```
-The FILE_SIZE_LIMIT configuration property is meant for specifying the threshold value
+The **FILE_SIZE_LIMIT** configuration property is meant for specifying the threshold value
 for the input video file size. i.e. if th input video file size is greater than the set value then the
 video will be compressed and converted by the SDK. Else the compression or conversion is not
-done.
-Allowed Values:
-This will accept the Enum values defined in the SDK enum FILE_SIZE_LIMIT .
-**Allowed Values : MAX_10MB ,MAX_20MB ,MAX_30MB ,MAX_40MB ,MAX_50MB ,MAX_60MB ,MAX_70MB ,MAX_80MB ,MAX_90MB ,MAX_100MB ,MAX_200MB ,MAX_300MB ,MAX_400MB ,MAX_500MB**
+done. This will accept the Enum values defined in the SDK *enum FILE_SIZE_LIMIT*.
+
+Allowed Values : **MAX_10MB ,MAX_20MB ,MAX_30MB ,MAX_40MB ,MAX_50MB ,MAX_60MB ,MAX_70MB ,MAX_80MB ,MAX_90MB ,MAX_100MB ,MAX_200MB ,MAX_300MB ,MAX_400MB ,MAX_500MB**
 
 ```Swift
 sdk_config.OUTPUT_FORMAT = .mp4
 ```
-The OUTPUT_FORMAT configuration property is meant for specifying the output video
+The **OUTPUT_FORMAT** configuration property is meant for specifying the output video
 format to which the SDK must convert the video. This property will take the values of type
 AVFileType, i.e.
-**Allowed values : .mp4, .m4v, .mov**
+
+Allowed values : **.mp4, .m4v, .mov**
 
 ```Swift
 sdk_config.COMPRESSION = .HD
 ```
-The COMPRESSION configuration property is meant for specifying the compression quality in
+The **COMPRESSION** configuration property is meant for specifying the compression quality in
 terms of definition, i.e. for compressing the video to quality of High Definition Video set “.HD”
-This will accept the Enum values defined in the SDK, enum COMPRESSION_MODE.
-**Allowed Values : NO_COMPRESSION, VHD ,HD ,SD ,LD ,VLD**
+This will accept the Enum values defined in the SDK, *enum COMPRESSION_MODE*.
+
+Allowed Values : **NO_COMPRESSION, VHD ,HD ,SD ,LD ,VLD**
 
 ## Steps for Integration of ConVidSDK
-- Copy the ConVidSDK.framework to the project folder
-- In Xcode project settings General>Frameworks & Libraries Add the SDK as framework with
-“Embed & Sign” option
+- Copy the **ConVidSDK.framework** to the project folder
+- In Xcode project settings **General>Frameworks & Libraries** Add the SDK as framework with
+“**Embed & Sign**” option
 - Go to your swift class file and add below code:
     ```Swift
         import ConVidSDK
