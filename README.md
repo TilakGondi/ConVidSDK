@@ -1,9 +1,10 @@
 # ConVidSDK
-**About:
-**This SDK will convert the video at given URL into .mp4/.mov/.m4v format and compress it with
+**About:**
+This SDK will convert the video at given URL into .mp4/.mov/.m4v format and compress it with
 predefined compression bit rate of VLD/LD/SD/HD/VHD/nill.
 
 **SDK Configuration:**
+
 Declare the sdk_config var of type ConVidConfiguration to pass the required Configuration values
 to SDK
 ```Swift 
