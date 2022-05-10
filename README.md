@@ -17,7 +17,7 @@ var sdk_config:ConVidConfiguration = ConVidConfiguration()
 sdk_config.FILE_SIZE_LIMIT = .MAX_30MB 
 ```
 The **FILE_SIZE_LIMIT** configuration property is meant for specifying the threshold value
-for the input video file size. i.e. if th input video file size is greater than the set value then the
+for the input video file size. i.e. if the input video file size is greater than the set value then the
 video will be compressed and converted by the SDK. Else the compression or conversion is not
 done. This will accept the Enum values defined in the SDK *enum FILE_SIZE_LIMIT*.
 
